@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage[linguistics]{forest}       % Syntax Tree 패키지 
+\usepackage[a4paper, 
+            top = 2.5cm, 
+            bottom = 2.5cm, 
+            left = 2cm, 
+            right = 2cm]{geometry}     % 용지 여백 조절 패키지 
+\usepackage{fancyhdr}                  % 머리글, 바닥글 조정 패키지
+\pagestyle{fancy}
+\fancyhf{} % 기존 머리글과 바닥글 초기화
+\fancyhead[R]{Syntax(001) - quiz(1)}   % 오른쪽: 문서 제목
+\fancyfoot[L]{\nouppercase{\leftmark}} % 왼쪽: 현재 section 제목
+\fancyfoot[R]{\thepage}                % 오른쪽: 페이지 번호
+\renewcommand{\sectionmark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\headrulewidth}{0.4pt}   % 머리글 아래쪽 선
+\renewcommand{\footrulewidth}{0.4pt}   % 바닥글 위쪽 선
+\setlength{\headheight}{14pt}          % 머리글 높이 확보
+
+% 제목 페이지용 바닥글
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \fancyfoot[L]{1. Tree}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0.4pt}%
+}
+
+\setcounter{secnumdepth}{0}            % section 넘버링 제거
+\forestset{
+  terminal/.style={
+    no edge,
+    l=3ex,
+    for parent={l sep=0pt}
+  }
+}
+
+% Short form for a lexical category and its terminal.
+\forestset{
+  lex/.style={append={[#1, terminal]}},
+  simple terminals/.style={
+    delay={for tree={split option={content}{ }{content,lex}}}
+  }
+}
+
+% Reusable GPS tree block; default width is 0.48\textwidth.
+\NewDocumentEnvironment{gpstree}{O{0.48\textwidth} m +b}
+{%
+  \begin{minipage}[t]{#1}
+  \vspace{0pt}%
+  \textbf{#2}\par
+  \medskip
+  \centering
+  \makebox[\linewidth][c]{%
+    \begin{forest} simple terminals
+      #3
+    \end{forest}%
+  }
+  \end{minipage}%
+}
+{}
+
+% Metadata
+\title{2026 Fall Syntax(001): \\ \medskip \large{quiz(1)\_tree, questions, and answers}}
+\author{강초롱  /  14-602}
+\date{September 28, 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+\bigskip
+\begin{centering}
+\section[Q. Draw a tree of the given sentence and answer some questions.]{Draw a tree of the given sentence and answer some questions.\protect\footnotemark}
+\footnotetext{문제 당 0.5점 \& 트리 노드 1개 당 0.5점. 만점(10점)에서 0.5점씩 감점.}
+\end{centering}
+\bigskip
+\begin{center}
+  {\large
+    \textbf{sentence:} Heidi and her sister discussed\\
+    if the outcome of the election was unexpected.
+  }
+\end{center}
+
+\bigskip
+\centering
+\section{1. Tree}
+\bigskip
+\noindent
+\begin{gpstree}{}
+[TP$_1$ [ConjP/NP [NP$_1$ [N$_1$ Heidi]][Conj and][NP$_2$ [D$_1$ her][N$_2$ sister]]][VP$_1$ [V$_1$ discussed][CP [C if][TP$_2$ [NP$_3$ [D$_2$ the][N$_3$ outcome][PP [P of][NP$_4$ [D$_3$ the][N$_4$ election]]]][T was][VP$_2$ [V$_2$ unexpected]]]]]]
+\end{gpstree}
+
+\newpage
+\section{2. Questions}
+\bigskip
+\begin{enumerate}
+  \setlength{\itemsep}{1.5\itemsep}
+  \item [a.] What is the root node? 
+  \item [b.] Which node(s) dominates V \textit{unexpected}? 
+  \item [c.] What node(s) immediately dominate P \textit{of}?
+  \item [d.] What node(s) does NP \textit{Heidi} c-command?
+  \item [e.] What node(s) does N \textit{outcome} symmetrically c-command?
+  \item [f.] What node(s) does the embedded TP exhaustively dominate?
+  \item [g.] What node(s) does the matrix V asymmetrically c-command?
+  \item [h.] What node(s) precedes N \textit{outcome}?
+  \item [i.] What node(s) immediately precedes Conj. \textit{and}?
+  \item [j.] Does V \textit{discussed} head-govern N \textit{outcome}? Why or why not?
+  \item [k.] Does the Conj/NP phrase-govern VP \textit{unexpected}? Why or why not?
+  \item [l.] What node(s) c-commands V \textit{discussed}?
+  \item [m.] Is NP \textit{Heidi and her sister} a constituent of the matrix TP?
+  \item [n.] What node(s) head-governs V \textit{unexpected}? 
+  \item [o.] What node(s) phrase-governs PP?
+  \item [p.] What is the object of the preposition \textit{of}?
+\end{enumerate}
+
+\newpage
+\section{3. Answers}
+\bigskip
+\begin{enumerate}
+  \setlength{\itemsep}{1.5\itemsep}
+  \item [a.] What is the root node? \quad \textbf{TP$_1$}
+  \item [b.] Which node(s) dominates V \textit{unexpected}? \quad \textbf{VP$_2$, TP$_2$, CP, VP$_1$, TP$_1$} 
+  \item [c.] What node(s) immediately dominate P \textit{of}? \quad \textbf{PP}
+  \item [d.] What node(s) does NP \textit{Heidi} c-command? \quad \textbf{Conj, NP$_2$, D$_1$, N$_2$}
+  \item [e.] What node(s) does N \textit{outcome} symmetrically c-command? \quad \textbf{D$_2$, PP}
+  \item [f.] What node(s) does the embedded TP exhaustively dominate? \quad \textbf{D$_2$, N$_3$, P,  D$_3$, N$_4$, V$_2$}
+  \item [g.] What node(s) does the matrix V asymmetrically c-command? \\[0.4em]
+  \textbf{C, TP$_2$, NP$_3$, D$_2$, N$_3$, PP, P, NP$_4$, D$_3$, N$_4$, T, VP$_2$, V$_2$}
+  \item [h.] What node(s) precedes N \textit{outcome}? \quad \textbf{D$_2$, C, V$_1$, NP$_1$, Conj, NP$_2$, N$_1$, D$_1$, N$_2$}
+  \item [i.] What node(s) immediately precedes Conj. \textit{and}? \quad \textbf{NP$_1$, N$_1$}
+  \item [j.] Does V \textit{discussed} head-govern N \textit{outcome}? Why or why not? \\[0.4em]
+  \textbf{No, because there is an intervener C \textit{if}.}
+  \item [k.] Does the Conj/NP phrase-govern VP \textit{unexpected}? Why or why not? \\[0.4em]
+  \textbf{Yes, because there is no intervener.}
+  \item [l.] What node(s) c-commands V \textit{discussed}? \quad \textbf{Conj/NP, CP}
+  \item [m.] Is NP \textit{Heidi and her sister} a constituent of the matrix TP? \quad \textbf{Yes.}
+  \item [n.] What node(s) head-governs V \textit{unexpected}? \quad \textbf{T}
+  \item [o.] What node(s) phrase-governs PP? \quad \textbf{VP$_2$}
+  \item [p.] What is the object of the preposition \textit{of}? \quad \textbf{NP$_4$}
+\end{enumerate}
+\end{document}

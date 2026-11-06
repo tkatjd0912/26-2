@@ -1,0 +1,209 @@
+\documentclass{article}
+\usepackage{kotex}
+\usepackage{setspace}  
+\setstretch{1.15}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage[linguistics]{forest}
+\usepackage[a4paper, 
+            left = 2.5cm,
+            right = 2.5cm,
+            top = 2cm,
+            bottom = 2cm]{geometry}
+\usepackage{fancyhdr}       
+\usepackage{gb4e}
+\noautomath
+\glossglue=0.7em plus 0.2em minus 0.1em
+\newcommand{\glabbr}[1]{\textsc{\MakeLowercase{#1}}}
+\pagestyle{fancy}
+\fancyhf{}                             
+\fancyfoot[L]{\nouppercase{Syntax(001) Midterm}} 
+\fancyfoot[R]{\thepage}                
+\renewcommand{\headrulewidth}{0pt}    
+\renewcommand{\footrulewidth}{0.4pt}   
+\setcounter{secnumdepth}{0}
+
+% PS-rule trees and X-bar trees
+\forestset{
+  terminal/.style={
+    font=\itshape,
+    no edge,
+    l=3ex,
+    for parent={l sep=0pt}
+  },
+  lex/.style={append={[#1, terminal]}},
+  simple terminals/.style={
+    delay={for tree={split option={content}{ }{content,lex}}}
+  },
+  ps tree/.style={
+    simple terminals,
+    for tree={
+      align=center,
+      parent anchor=south,
+      child anchor=north,
+      edge={semithick},
+      inner sep=1pt,
+      l sep=10mm,
+      s sep=6mm
+    }
+  },
+  xbar tree/.style={
+    simple terminals,
+    for tree={
+      align=center,
+      parent anchor=south,
+      child anchor=north,
+      edge={semithick},
+      inner sep=1pt,
+      l sep=8mm,
+      s sep=4.5mm
+    }
+  }
+}
+\newcommand{\onebar}[1]{#1\ensuremath{^{\prime}}}
+\newcommand{\twobar}[1]{#1\ensuremath{^{\prime\prime}}}
+
+\begin{document}
+\large
+
+\title{Syntax(001) Midterm}
+\author{강초롱}
+\date{2026 Fall}
+\maketitle
+\thispagestyle{fancy}
+\bigskip
+
+\section{1. Consider the following data taken from Turkish \normalsize(3 points)}
+\medskip 
+\begin{exe}
+  \ex
+  \gll Siz \textbf{gid}-iyor.sun.uz.\\
+       you.\glabbr{PL} go-\glabbr{PRES}.2.\glabbr{PL}\\
+  \glt `You are going.'
+
+  \ex
+  \gll Ali \"{u}\c{c} ye\c{s}il top \textbf{al}-d\i.\\
+       Ali three green ball buy-\glabbr{PST}.3\glabbr{SG}\\
+  \glt `Ali bought three green balls.'
+
+  \ex
+  \gll Senin s\i{}nav\i{} \textbf{ge\c{c}}-meni
+       \textbf{isti}-yorum.\\
+       you test pass-\glabbr{INF} want-\glabbr{PRES}.1\glabbr{SG}\\
+  \glt `I want you should pass the test.'\footnote{the matrix verb agrees with the silent matrix subject.}
+\end{exe}
+\bigskip
+\noindent \textbf{a.} In the data, PRES means ``present tense'', PST means ``past tense''. 
+What part of speech are \textbf{`gid'}, \textbf{`al'}, \textbf{`ge\c{c}'}, and \textbf{`isti'}? 
+What tests did you use to figure out what speech they were? \par
+\vspace{3cm}
+
+\noindent \textbf{b.} Provide the PSRs needed to generate the trees \\(assume that every clause is a CP, and \textit{\"{u}\c{c}} ``three'' is an adjective). \par
+\vspace{3cm}
+
+\newpage
+\section{2. Consider the following sentence \normalsize}
+\begin{center}
+     \textbf{The mailman heard that his boss had just arrived at the parking lot.} \par
+\end{center}
+\bigskip
+\noindent \textbf{a.} For the following words, indicate their part of speech \textit{AND} \par
+\medskip \noindent (i) if the word is an open class part of speech, explain the (morphological/syntactic)\\ distributional criteria by which you came up with that classification.\par
+\vspace{1em}
+\noindent (ii) if the word is closed part of speech, indicate it with ``closed''.\par
+\vspace{1em}
+\noindent (iii) Mark whether each word is a lexical or functional part of speech. (4 points) \par
+\vspace{2em}
+\begin{description}
+    \setlength{\itemsep}{2em}
+    \item[\textbf{The}] 
+    \item[\textbf{mailman}] 
+    \item[\textbf{heard}]
+    \item[\textbf{that}]
+    \item[\textbf{his}]
+    \item[\textbf{had}]
+    \item[\textbf{at}]
+    \item[\textbf{parking}]
+\end{description}
+
+\newpage
+\noindent \textbf{b.} The above sentence is ambiguous (assume that the ambiguity comes from the phrase ``at the parkng lot''). Draw the two PSR trees that distinguish the two possible meanings of the sentence. Provide a Korean paraphrase for each meaning. (2 points) \par
+\vspace{10cm}
+\null\vfill
+
+\newpage
+\noindent \textbf{c.} Draw the two X-bar theoretic trees that distinguish the two possible meanings of the sentence. Provide a Korean paraphrase for each meaning. (2 points)
+\vspace{10cm}
+\null\vfill
+
+\newpage
+\noindent \textbf{d.} Answer the following questions (6 points) \par
+\bigskip \noindent (i) Can the two theories (PSRs and X-bar theory) explain the ambiguity? If so, explain why. You must refer to the tree structures you provided above in your answer. \par
+\vspace{1.5cm}
+\noindent (ii) In the slightly modified sentence below, the interpretation in which \textit{what the mailman heard was that his co-worker had just arrived at the parking lot} is available. Can both theories account for this reading? \par
+\begin{center}
+\medskip \noindent {\textbf{\textit{The mailman heard that his boss had just arrived at the parking lot. \\ He heard that his co-worker did so at the parking lot.}}}\par
+\end{center}
+\vspace{3cm}
+\noindent (iii) Explain why (a) is ungrammatical but (b) is grammatical, referring to the rules of X-bar theory.\par
+\medskip \noindent (a) *The mailman \textbf{heard at the parking lot the news}\par
+\medskip \noindent (b) The mailman \textbf{laughed at the parking lot this morning}
+
+\newpage
+\section{3. Consider the following data from Breton, a Celtic language. \\ \normalsize{(7 points)}}
+\medskip
+\setcounter{exx}{0}
+\begin{exe}
+  \ex
+  \gll ar baner c'hlas \\
+       the basket blue \\
+  \glt `the blue basket'
+
+  \ex
+  \gll ar vleunienn wenn \\
+       the flower white \\
+  \glt `the white flower'
+
+  \ex
+  \gll Kador ar bugel bihan \\
+       Chair the child small \\
+  \glt `The small child's chair'
+
+  \ex
+  \gll Me a-zebr pesked alies \\
+       I eat fish often \\
+  \glt `I often eat fish'  
+\end{exe}
+\bigskip
+\noindent \textbf{i.} What is the setting of the specifier parameter? \par
+\vspace{2em}
+\noindent \textbf{ii.} What is the setting of the adjunct parameter? \par
+\vspace{2em}
+\noindent \textbf{iii.} What is the setting of the complement parameter? \par
+\vspace{2em}
+\noindent \textbf{iv.} Draw the X-bar theoretic tree for (d) and answer the following questions.
+\vspace{4cm}
+\begin{itemize}
+     \setlength{\itemsep}{1em}
+     \item[(a)] What node(s) does the VP dominate?  
+     \item[(b)] What node(s) does the V head govern?
+     \item[(c)] What node(s) immediately precedes AdvP?
+     \item[(d)] List all the nodes that asymmetrically c-command DP \textit{fish}? 
+     \item[(e)] What node(s) does the TP exhaustively dominate? 
+     \item[(f)] What node(s) does the subject DP phrase govern?
+\end{itemize}
+
+\section{4. Draw the X-bar theoretic tree for the following sentence and explain why the acceptability of the following sentence challenges the binding theory we discussed in class. \normalsize{(3 points)}}
+\medskip
+\begin{center}
+     \textbf{Lucie$_j$'s sister$_i$ expects herself$_i$ to charm Bill.}
+\end{center}
+
+\newpage
+\section{5. Draw the X-bar theoretic tree for the following sentence, and determine whether the matrix clause and the embedded clause are finite or non-finite. You must provide evidence for your answer. \normalsize{(3 points)}}
+\medskip
+\begin{center} 
+    \textbf{I asked/*asks her to leave/*left.}
+\end{center}
+
+\end{document}
