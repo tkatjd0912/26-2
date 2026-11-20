@@ -2,6 +2,7 @@
 \documentclass{article}
 \usepackage{kotex}
 \usepackage{titlesec}
+\usepackage{indentfirst}
 
 \usepackage[a4paper, 
             top=1cm, 
@@ -21,6 +22,14 @@
 \newcommand{\englabel}[1]{{\normalfont\englabelfont\small #1}}
 
 \usepackage{titling}
+\usepackage{url}
+\makeatletter
+\renewcommand{\@makefntext}[1]{%
+  \noindent
+  \setlength{\hangindent}{2.133em}%
+  \hangafter=1\relax
+  \makebox[1.8em][r]{\@makefnmark}\hspace{0.333em}#1}
+\makeatother
 \title{연구계획서 초안} % chktex 36
 \author{언어학과 이승헌(2025\mbox{-}17960)} % chktex 36
 \date{}
@@ -30,24 +39,30 @@
 
 \begin{document}
 \maketitle
-\bigskip
 
 \subsection{연구 주제 \englabel{topic}}
- \indent 수업 시간에 다룬 \textendash{}을 연구 주제로 선정하였다. 
+수업 시간에 다룬 `영아의 말소리 지각 \textendash{} 단어 분절'\footnote{Jusczyk \& Aslin (1995) 강독}을 연구 주제로 선정하였다. 영아가 말소리를 지각하기 위해서는 크게 세 가지의 문제를 해결해야 하는데, 이 중 하나가 바로 단어 분절 문제다. 영아에게는 띄어쓰기 없는 말의 흐름에서 단어를 찾아야 하는 과제가 주어지며, Jusczyk \& Aslin (1995)에 따르면 영아는 생후 6--7.5개월 시점부터 단어 분절 능력을 보이는 것으로 드러난다. 단, Jusczyk \& Aslin (1995)에서는 연령차에 따른 단어 분절 능력의 차이를 따로 검정하지 않았으므로, 단어 분절 능력이 어느 특정한 시점에 나타나는 것인지는 알 수 없다. 또한, 영어 습득 영아를 대상으로 실험을 진행했기 때문에, 단어 분절 능력 출현 시기에 대한 결과를 언어 보편적으로 확장할 수도 없다. 
 
-\subsection{레퍼런스 \englabel{ref}}
-\subsubsection{출발 논문 \englabel{main}}
-\subsubsection{참고 문헌 \englabel{sub}}
+\smallskip
+\subsection{레퍼런스 \englabel{ref}} 
+\subsubsection{출발 논문} 
+{\leftskip=\parindent%
+\noindent Jusczyk, P. W., \& Aslin, R. N. (1995). Infants' detection of the sound patterns of words in fluent speech. Cognitive Psychology, 29(1), 1--23.\ \url{https://doi.org/10.1006/cogp.1995.1010}\par}
+\subsubsection{참고 문헌}
 \begin{itemize}
-    \item 
-    \item 
+    \item Chai, J. H., \& Ko, E.-S. (2025). Input properties shape word segmentation performance across child development: A computational modeling study. Infancy, 30(5), e70046.\ \url{https://doi.org/10.1111/infa.70046}
+    \item Chai, J. H., Mun, S., \& Ko, E.-S. (2026). The alignment between language properties and computational algorithms enhances statistical word segmentation: Evidence from Korean child-directed speech. Journal of Child Language. Advance online publication.\ \url{https://doi.org/10.1017/S0305000926100646}
 \end{itemize}
-
 \subsection{연구 질문 \englabel{question}}
- \indent 본 연구가 확인하고자 하는 것은 \textendash{} 
+본 연구의 연구 질문은 `한국어 영아도 6--7.5개월 사이에 단어 분절 능력을 보이는가?'이다. Jusczyk \& Aslin (1995)의 연구는 영어 습득 영아에게 영어 발화를 들려주었을 때의 단어 분절 양상만 관찰하였으므로, 다른 언어 환경에서도 유사한 실험 결과가 나타나는지는 별도의 실험을 통해 검증해 보아야 한다. 이에, 본 연구는 한국어 습득 영아를 대상으로 한국어 발화를 들려주었을 때의 단어 분절 양상을 관찰하고자 한다. % chktex 38
 
+한편, Jusczyk \& Aslin (1995)의 연구에서는 영아에게 제공되는 발화 자료의 스타일이 크게 두 종류로 나뉘었다.\footnote{\textsuperscript{1\textup{\char41}} 목표 단어를 고립된 형태로 발화, \textsuperscript{2\textup{\char41}} 목표 단어가 포함된 전체 문장을 발화} 그러나 이는 발화 단위의 차이일 뿐, 발화 문장에서의 스타일 차이가 아니다. 선행 연구에서 미처 검증하지 못한 부분을 보완하고자, 본 연구에서는 영아가 IDS와 ADS 중 어떤 발화 스타일에서 단어 경계를 더 쉽게 찾는지도 알아보고자 한다.\footnote{한국어 영아의 단어 분절 시기, 발화 스타일에 따른 단어 분절 능력 (IDS/ADS)을 한 실험에서 모두 검증하는 것이 가능할지 고민입니다. 실험을 통해 두 가지 부분을 모두 검증하는 것과, 한국어 영아의 단어 분절 시기만 검증하는 것 중, 어느 방향이 더 좋을지 여쭙고 싶습니다. }
+
+\medskip
 \subsection{가설 \englabel{hypothesis}}
-
+\begin{itemize}
+  \item 한국어 습득 영아도 영어 습득 영아와 마찬가지로 6--7.5개월 경에 단어 분절 능력이 나타날 것이다. 
+\end{itemize}
 \subsection{연구 방법 \englabel{methodology}}
 
 \end{document}
