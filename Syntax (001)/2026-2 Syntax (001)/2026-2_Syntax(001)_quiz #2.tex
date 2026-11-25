@@ -1,0 +1,118 @@
+﻿\documentclass[11pt]{article}
+\usepackage{kotex}
+\usepackage{forest}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{Syntax(001) - quiz(2)}
+\fancyfoot[L]{\nouppercase{\leftmark}}
+\fancyfoot[R]{\thepage}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyfoot[L]{}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+\setcounter{secnumdepth}{0}
+
+\title{2026 Fall Syntax(001): \\ \large Quiz 2}
+\author{강초롱 / 14-602}
+\date{September 28, 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+
+\section*{CPS1. Hungarian DPs (Chapter 7)}
+
+In the text above, we argued that the structure of genitive constructions in English looks like:
+
+\begin{center}
+\begin{forest}
+for tree={align=center, s sep=10mm, l sep=8mm}
+[DP
+  [DP [possessor]]
+  [D$'$ 
+    [D [\textit{'s}]]
+    [NP [N$'$ [N [\textit{possessed}]] [\ldots]]]
+  ]
+]
+\end{forest}
+\end{center}
+
+Consider the following data from Hungarian. Does the possessor DP appear in the same place as the English one? Assume the determiners \textit{az} and \textit{a} modify the possessed noun, not the possessor. The ending on the word \textit{kalapom/kalapod/kalapja} varies depending upon the possessor. This does not affect the answer to this question. (Data from Szabolcsi 1994.)
+
+\begin{enumerate}
+  \item[a)] \textit{az \quad én \quad kalapom}\\
+  the \quad I \quad hat-1SG\\
+  ``my hat''
+
+  \item[b)] \textit{a \quad te \quad kalapod}\\
+  the \quad you \quad hat-2SG\\
+  ``your hat''
+\end{enumerate}
+
+Hungarian has another possessive construction, seen in (c).
+
+\begin{enumerate}
+  \item[c)] \textit{Marinak a \quad kalapja}\\
+  Mary \quad the \quad hat-3SG\\
+  ``Mary's hat''
+\end{enumerate}
+
+Where is the possessor DP in (c)? Explain your answer.
+
+\newpage
+\section*{GPS3 \& CPS1. Irish Finite Complementizers (Chapter 9)}
+
+In English, complementizers are primarily sensitive to whether or not the embedded TP is an infinitive marked with \textit{to}. In Modern Irish, finite complementizers vary along an additional line. Examine the data below. The extra \textit{m} and \textit{h} on either side of \textit{b} in the embedded verb are effects of initial consonant mutation and are irrelevant here. Assume the data are representative of the patterns in the language.
+
+\begin{enumerate}
+  \item[(a)] \textit{Ceapaim \quad go \quad mbuaileann \quad sé \quad le \quad Seán \quad inniu.}\\
+  think.1SG \quad that \quad meets \quad he \quad with \quad John \quad today\\
+  ``I think that he meets with John today.''
+
+  \item[(b)] \textit{Ceapaim \quad gur \quad bhuail \quad sé \quad le \quad Seán \quad inné.}\\
+  think.1SG \quad that \quad met \quad he \quad with \quad John \quad yesterday\\
+  ``I think that he met with John yesterday.''
+
+  \item[(c)] \textit{Ceapaim \quad go \quad mbuailfidh \quad sé \quad le \quad Seán \quad inniu.}\\
+  think.1SG \quad that \quad meet.FUT \quad he \quad with \quad John \quad today\\
+  ``I think that he will meet with John today.''
+
+  \item[(d)] \textit{Ceapaim \quad gur \quad bhuailfeadh \quad sé \quad le \quad Seán \quad inné.}\\
+  think.1SG \quad that \quad meet.COND \quad he \quad with \quad John \quad yesterday\\
+  ``I think that he would meet with John yesterday.''
+\end{enumerate}
+
+Taking these data together with the Irish complementizer data in General Problem Set 2, what do the theta grids for \textit{go} and \textit{gur} look like? Propose a theta grid for each complementizer and explain how the data support your analysis.
+
+\newpage
+\section*{3. Tree Drawing}
+
+Draw an X-bar theoretic tree for each sentence below. Assume the DP proposal and the projections ProgP, PerfP, and Voice$_{passive}$P have been introduced. Use the appropriate projections in each tree and include all relevant functional structure.
+
+\vspace{2em}
+\begin{enumerate}
+  \item The tuna will be being eaten.
+
+  \vspace{8cm}
+
+  \item Calvin had been eating.
+
+  \vspace{8cm}
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
