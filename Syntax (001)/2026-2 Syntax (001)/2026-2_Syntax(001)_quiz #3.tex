@@ -29,86 +29,245 @@
 \maketitle
 \thispagestyle{firstpage}
 
-\section*{CPS1. Hungarian DPs (Chapter 7)}
+\section*{CPS3. Germanic Verb Second (Chapter 10)}
 
-In the text above, we argued that the structure of genitive constructions in English looks like:
+\textit{Background:} Many of the languages of the Germanic language family exhibit what is known as \textit{verb second} order (also known as V2). With V2, the main restriction on word order is that, in main clauses, the constituents may appear in essentially any order, as long as the verb is in the second position in the sentence. This is seen in the following data from German:
+
+\medskip
+\textit{German} (Vikner 1995)
+
+\begin{enumerate}
+\item[a)]
+  \begin{tabular}[t]{@{}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{}}
+    \textit{Die} & \textit{Kinder} & \textit{haben} & \textit{diesen} & \textit{Film} & \textit{gesehen.}\\
+    the & children & have & this & film & seen
+  \end{tabular}\\
+  ``The children have seen this film.''
+  \item[b)] \textit{Diesen Film haben die Kinder gesehen.}
+\end{enumerate}
+
+One analysis of this phenomenon uses the specifier of CP as a ``topic'' position. The most topical constituent (the bit under discussion) is put in the specifier of CP (i.e., it is moved there; we will discuss this kind of movement in Chapter 12). Whatever is in T then moves to the C head by T $\rightarrow$ C movement:
 
 \begin{center}
 \begin{forest}
-for tree={align=center, s sep=10mm, l sep=8mm}
-[DP
-  [DP [possessor]]
-  [D$'$ 
-    [D [\textit{'s}]]
-    [NP [N$'$ [N [\textit{possessed}]] [\ldots]]]
+for tree={align=center, s sep=12mm, l sep=9mm}
+[CP
+  [XP [topic]]
+  [C$'$
+    [C, name=Chead]
+    [TP
+      [$\ldots$]
+      [T$'$
+        [$\ldots$]
+        [T, name=Thead]
+      ]
+    ]
   ]
 ]
 \end{forest}
 \end{center}
 
-Consider the following data from Hungarian. Does the possessor DP appear in the same place as the English one? Assume the determiners \textit{az} and \textit{a} modify the possessed noun, not the possessor. The ending on the word \textit{kalapom/kalapod/kalapja} varies depending upon the possessor. This does not affect the answer to this question. (Data from Szabolcsi 1994.)
-
-\begin{enumerate}
-  \item[a)] \textit{az \quad én \quad kalapom}\\
-  the \quad I \quad hat-1SG\\
-  ``my hat''
-
-  \item[b)] \textit{a \quad te \quad kalapod}\\
-  the \quad you \quad hat-2SG\\
-  ``your hat''
-\end{enumerate}
-
-Hungarian has another possessive construction, seen in (c).
-
-\begin{enumerate}
-  \item[c)] \textit{Marinak a \quad kalapja}\\
-  Mary \quad the \quad hat-3SG\\
-  ``Mary's hat''
-\end{enumerate}
-
-Where is the possessor DP in (c)? Explain your answer.
+For the tree above and this problem set, assume that the VP and TP have their heads on the right, but CP is left-headed.
 
 \newpage
-\section*{GPS3 \& CPS1. Irish Finite Complementizers (Chapter 9)}
-
-In English, complementizers are primarily sensitive to whether or not the embedded TP is an infinitive marked with \textit{to}. In Modern Irish, finite complementizers vary along an additional line. Examine the data below. The extra \textit{m} and \textit{h} on either side of \textit{b} in the embedded verb are effects of initial consonant mutation and are irrelevant here. Assume the data are representative of the patterns in the language.
+\vspace{3em}
+\textit{Part 1:} Now consider the following data from embedded clauses in German.
 
 \begin{enumerate}
-  \item[(a)] \textit{Ceapaim \quad go \quad mbuaileann \quad sé \quad le \quad Seán \quad inniu.}\\
-  think.1SG \quad that \quad meets \quad he \quad with \quad John \quad today\\
-  ``I think that he meets with John today.''
-
-  \item[(b)] \textit{Ceapaim \quad gur \quad bhuail \quad sé \quad le \quad Seán \quad inné.}\\
-  think.1SG \quad that \quad met \quad he \quad with \quad John \quad yesterday\\
-  ``I think that he met with John yesterday.''
-
-  \item[(c)] \textit{Ceapaim \quad go \quad mbuailfidh \quad sé \quad le \quad Seán \quad inniu.}\\
-  think.1SG \quad that \quad meet.FUT \quad he \quad with \quad John \quad today\\
-  ``I think that he will meet with John today.''
-
-  \item[(d)] \textit{Ceapaim \quad gur \quad bhuailfeadh \quad sé \quad le \quad Seán \quad inné.}\\
-  think.1SG \quad that \quad meet.COND \quad he \quad with \quad John \quad yesterday\\
-  ``I think that he would meet with John yesterday.''
+\item[(d)]
+  \begin{tabular}[t]{@{}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{}}
+    \textit{Er} & \textit{sagt,} & \textit{daß} & \textit{die} & \textit{Kinder} & \textit{diesen} & \textit{Film} & \textit{gesehen} & \textit{haben.}\\
+    he & said & that & the & children & this & film & seen & have
+  \end{tabular}\\
+  ``He said that the children saw this film.''
+  \item[(e)] \textit{*Er sagt, [daß die Kinder haben diesen Film gesehen].}
 \end{enumerate}
 
-Taking these data together with the Irish complementizer data in General Problem Set 2, what do the theta grids for \textit{go} and \textit{gur} look like? Propose a theta grid for each complementizer and explain how the data support your analysis.
+How does this data support the T $\rightarrow$ C analysis of V2? (Having trouble? Think about embedded \textit{yes/no} questions in English.)
 
-\newpage
-\section*{3. Tree Drawing}
+\vspace{5em}
+\textit{Part 2:} Consider now the following sentence of German and compare it to the embedded clauses in Part 1 above.
 
-Draw an X-bar theoretic tree for each sentence below. Assume the DP proposal and the projections ProgP, PerfP, and Voice$_{passive}$P have been introduced. Use the appropriate projections in each tree and include all relevant functional structure.
-
-\vspace{2em}
 \begin{enumerate}
-  \item The tuna will be being eaten.
+\item[(f)]
+  \begin{tabular}[t]{@{}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{\quad}l@{}}
+    \textit{Gestern} & \textit{sahen} & \textit{die} & \textit{Kinder} & \textit{den} & \textit{Film.}\\
+    Yesterday & saw & the & children & the & film
+  \end{tabular}\\
+  ``The children saw the film yesterday.''
+\end{enumerate}
 
-  \vspace{8cm}
+Given what you now know about V2 and T $\rightarrow$ C movement in these languages, is German a V $\rightarrow$ T raising language or not?
 
-  \item Calvin had been eating.
+\vspace{5em}
+\textit{Bonus:} Is the data in Part 1 above consistent with your answer? If not, how might you make it consistent?
+\vspace{3em}
+\newpage
+\section*{CPS2. Middles and Passives (Chapter 11)}
 
-  \vspace{8cm}
+Middles are constructions that are a little bit like passives. An example of an active/middle pair is seen below:
+
+\begin{enumerate}
+  \item[a)] I cut the soft bread.
+  \item[b)] The soft bread cuts easily.
+\end{enumerate}
+
+In (b), the theme appears in the subject position. One analysis of this order has the theme undergoing DP movement to subject position.
+
+Consider now the following triplet of sentences. The first sentence is called a middle, the second an active, and the third a causative.
+
+\begin{enumerate}
+  \item[c)] The boat sank. \hfill \textit{middle}
+  \item[d)] The torpedo sank the boat. \hfill \textit{active}
+  \item[e)] The captain sank the boat (with a torpedo). \hfill \textit{causative}
+\end{enumerate}
+
+\vspace{3em}
+\textit{Part 1:} Describe the relationship between the active, middle, and causative in terms of their theta grids.
+
+\vspace{5em}
+\textit{Part 2:} Now consider the passives of sentences (c--e). Why should sentence (f) be ungrammatical, but (g) and (h) grammatical?
+
+\begin{enumerate}
+  \item[(f)] *Was sunk (by the boat).\\
+  (Also: *It was sunk by the boat, where \textit{it} is an expletive.)
+  \item[(g)] The boat was sunk by the torpedo.
+  \item[(h)] The boat was sunk by the captain (with a torpedo).
+\end{enumerate}
+\vspace{3em}
+\newpage
+\section*{CPS6. Theta Roles and Case (Chapter 11)}
+
+Consider the following sentences, and then answer the questions in Parts 1 and 2 below:
+
+\begin{enumerate}
+  \item[(a)] Darnell laughed.
+  \item[(b)] *Darnell laughed himself.
+  \item[(c)] Darnell laughed himself out of the room.
+  \item[(d)] We shouted.
+  \item[(e)] *We shouted the actors.
+  \item[(f)] We shouted the actors off the stage.
+\end{enumerate}
+
+\vspace{3em}
+\textit{Part 1:} Why are sentences (a), (c), (d), and (f) grammatical, while sentences (b) and (e) are ungrammatical? Propose an analysis of the construction illustrated in (c) and (f) which accounts for this, using trees to illustrate your analysis. Assume that the DPs in (c) and (f) get their theta-roles in the specifier of the PP, but that the only position available for accusative Case is the complement position to the V.
+
+\vspace{5em}
+\textit{Part 2:} Recall that the theta criterion enforces a one-to-one relationship between $\theta$-roles and referential (i.e., non-expletive) DPs:
+
+\begin{quote}
+\textit{Every referential DP must have a (distinct) $\theta$-role, and every $\theta$-role must be assigned to a (distinct) referential DP.}
+\end{quote}
+
+The Case filter is similar to the theta criterion, inasmuch as both conditions talk about the distribution of DPs. However, the Case filter was not stated as a one-to-one condition; it merely requires that every overt DP be assigned abstract Case. It does not require that every Case be assigned.
+
+\vspace{5em}
+\textbf{Question:} Should we leave the Case filter as it is, or should we rephrase it as a condition like the theta criterion---something like: ``Every overt DP must receive abstract Case, and every abstract Case must be assigned to an overt DP''? Refer to the sentences in (a--f) above in arguing for your answer. Ask yourself if the verb \textit{laugh} must always (or never) assign accusative Case in every situation.
+\vspace{3em}
+\newpage
+\section*{CPS4. Two Kinds of Raising (Chapter 11)}
+
+In the text, we proposed that subjects of non-finite clauses can raise to the subject position of finite clauses in sentences like (a):
+
+\begin{enumerate}
+  \item[(a)] Erica seems [t$_i$ to have left].
+\end{enumerate}
+
+This kind of raising is sometimes called \textit{subject-to-subject raising}. Now consider the following sentence:
+
+\begin{enumerate}
+  \item[(b)] Erica wants Janet to leave.
+\end{enumerate}
+
+This sentence should be ungrammatical, because \textit{to} is a non-finite T, so it cannot assign Case to Janet. One hypothesis that has been proposed to account for this says there is also a process of \textit{subject-to-object raising}:
+
+\begin{center}
+\begin{forest}
+for tree={align=center, s sep=7mm, l sep=5mm}
+[TP
+  [DP [Erica]]
+  [T$'$
+    [T [Ø$_{PRES}$]]
+    [VP
+      [V$'$
+        [V [wants]]
+        [DP$_i$ [Janet]]
+        [CP
+          [C$'$
+            [C]
+            [TP
+              [t$_i$]
+              [T$'$
+                [T [to]]
+                [VP [leave]]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+]
+\end{forest}
+\end{center}
+
+How does the following data support this analysis?
+
+\begin{enumerate}
+  \item[(c)] Erica wants Janet to leave.
+  \item[(d)] Erica wants him to leave.
+  \item[(e)] Erica believes her$_i$ to have been at the game.
+  \item[(f)] ?Erica believes herself$_i$ to have been at the game$_j$.
+  \item[(g)] *Erica believes her$_i$ to have been at the game$_j$.
+  \item[(h)] She$_i$ is believed (by Erica) to have been at the game$_j$.
+\end{enumerate}
+\newpage
+\section*{GPS1. English Movement Sentences (Chapter 12)}
+
+For each of the following sentences, give the D-structure tree and annotate it with arrows indicating what transformations have applied. The sentences may have head-to-head movement, \textit{do}-support, expletive insertion, DP movement, and \textit{wh}-movement.
+
+\begin{enumerate}
+  \item[a)] What is bothering you?
+  \item[b)] Who has seen my snorkel?
+  \item[c)] How was the plot discovered by the authorities?
+  \item[d)] Which animals appear to have lost their collars?
+  \item[e)] What did Jean think was likely to have been stolen?
+  \item[f)] Car sales have surprised the stockbrokers.
+  \item[g)] Have you seen my model airplane collection?
+  \item[h)] Can you find the lightbulb store?
+  \item[i)] John was bitten by an advertising executive.
+  \item[j)] It is likely that Tami will leave New York.
+  \item[k)] Tami is likely to leave New York.
+  \item[l)] It seems that Susy was mugged.
+  \item[m)] Susy seems to have been mugged.
+  \item[n)] What did you buy at the supermarket?
+  \item[o)] I asked what Beth bought at the supermarket.
+  \item[p)] What is it likely for Beth to have bought at the supermarket?\\
+  (Treat the PP \textit{for Beth} as appearing in the specifier of the embedded TP.)
+  \item[q)] What is likely to have been bought at the supermarket?
+  \item[r)] I ate a salad that was filled with lima beans.
+  \item[s)] The trail we walked today was built by slave labor.
+  \item[t)] Jose is always complaining about the guys who work near him.
+  \item[u)] The cost of bagels that are imported from Iceland surprised the teacher who(m) Mike hired last week.
 \end{enumerate}
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
